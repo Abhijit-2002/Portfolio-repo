@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-custom {
+ 
+  box-shadow: 0 0 25px 0 rgb(0, 99, 248); 
+  transition: all 0.3s ease-in-out;
+}
+
+
+.shadow-custom:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 2px 5px rgb(0, 99, 248); 
+}
+.shadow-custom1 {
+
+  box-shadow: 0 0 25px 0rgb(0, 99, 248); 
+  transition: all 0.3s ease-in-out;
+}
+
+
+.shadow-custom:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 2px 5px rgb(0, 99, 248); 
+}
+
+.slick-slide>div{
+  margin: 0 10px;
+}
+
+
+
+
+/* @media screen and (min-width: 768px) {
+  .slick-prev {
+    margin-right: 30px; /* Adjust the margin as needed for larger screens 
+  }
+} */
+
+.slack-prev,.slack-next{
+    position: absolute;
+}
+
+.slick-prev {
+  left: -10%; /* Adjust the left position as needed */
+}
+
+.slick-next {
+  right: -10%; /* Adjust the right position as needed */
+}

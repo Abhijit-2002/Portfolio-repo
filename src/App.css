@@ -1,0 +1,22 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.gradiant-text{
+  background-clip: text;
+  -webkit-background-clip: text;
+  @apply bg-gradient-to-t from-blue-500 to-cyan-500 text-transparent;
+}
+
+.box:hover{
+  border: 0;
+  box-shadow: 0 0 3px #0569ff, 0 0 7px #0569ff, 0 0 20px #0571ed;
+}
+
+.box.active{
+  border: 0;
+  box-shadow: 0 0 3px #0569ff, 0 0 7px #0569ff, 0 0 20px #0571ed;
+}
