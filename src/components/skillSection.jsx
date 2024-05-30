@@ -61,10 +61,10 @@ const Skill = () => {
   const renderImages = showAll ? Skillsets : Skillsets.slice(0, 10);
 
   return (
-    <div className=" pt-5 pb-1 pr-10 pl-5 ml-5 mr-5  lg:pt-20 lg:pb-20 lg:pr-40 lg:pl-40 lg:ml-20 lg:mr-20 text-center">
-      <ul className="flex  flex-wrap justify-between lg:justify-around items-center gap-14 lg:gap-28">
+    <div className=" pt-5 pb-1 pr-5 pl-5 ml-5 mr-5  lg:pt-20 lg:pb-20 lg:pr-40 lg:pl-40 lg:ml-20 lg:mr-20 text-center">
+      <ul className="flex  flex-wrap justify-evenly lg:justify-around items-center gap-12 lg:gap-28">
         {renderImages.map((image, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-col items-center transition-transform transform hover:scale-110">
             <li className="lg:border-none lg:rounded-lg bg-gray-800">
               <img src={image.src} alt="" className="lg:h-20 lg:w-20 h-12 w-12 " />
             </li>
