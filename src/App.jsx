@@ -233,7 +233,7 @@ function App() {
             <p className=" text-white">Made with ❤ by Abhijit Chakraborty</p>
           </div>
           <div>
-            <div className="contact-icons flex mt-4 lg:block ">
+            <div className="contact-icons hidden md:flex  mt-4  ">
               <a href="https://www.linkedin.com/in/abhijit02" className=" p-1 mr-2 ">
                 <img src={ln} alt="" />
               </a>
