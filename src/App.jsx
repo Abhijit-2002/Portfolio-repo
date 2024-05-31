@@ -13,7 +13,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { Typewriter, Cursor } from "react-simple-typewriter";
 
 function App() {
-  
   return (
     <>
       <div className=" scroll-smooth">
@@ -81,78 +80,162 @@ function App() {
             </ul>
           </div>
           <div className="display:block">
-            <a href="https://drive.google.com/file/d/1c-0UP4pBbntcjOXRx-jMLvq_wtR2MgzD/view?usp=sharing" className="bg-gradient-to-t from-blue-500 to-cyan-500 text-sm rounded-lg text-white lg:px-6 lg:py-2 hover:bg-blue-700 px-2 py-2  hover:cursor-pointer transition-transform transform hover:scale-110">
+            <a
+              href="https://drive.google.com/file/d/1c-0UP4pBbntcjOXRx-jMLvq_wtR2MgzD/view?usp=sharing"
+              className="bg-gradient-to-t from-blue-500 to-cyan-500 text-sm rounded-lg text-white lg:px-6 lg:py-2 hover:bg-blue-700 px-2 py-2  hover:cursor-pointer transition-transform transform hover:scale-110"
+            >
               Resume
             </a>
           </div>
         </div>
         {/* **************Banner Section ***************** */}
 
-        <div
-          id="Home"
-          className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700 lg:h-[100vh] h-auto "
-        >
-          <div className="text-white flex-1 mr-5">
-            <div className="">
-              <p className="text-3xl lg:text-5xl font-medium mt-2">I am </p>
-              <h1 className="text-5xl font-bold pl-4 mb-6 lg:text-7xl  ">
-                Abhijit{" "}
-                <span className="gradiant-text lg:pl-2"> Chakraborty </span>
-              </h1>
+        <div className="hidden md:block">
+          <div
+            id="Home"
+            className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700 lg:h-[100vh] h-auto "
+          >
+            <div className="text-white flex-1 mr-5">
+              <div className="">
+                <p className="text-3xl lg:text-5xl font-medium mt-2">I am </p>
+                <h1 className="text-5xl font-bold pl-4 mb-6 lg:text-7xl  ">
+                  Abhijit{" "}
+                  <span className="gradiant-text lg:pl-2"> Chakraborty </span>
+                </h1>
 
-              <h1 className="text-2xl font-medium">
-                I'm a{' '}
-                <span className=" text-3xl font-bold gradiant-text">
-                  <Typewriter
-                    words={[" Fullstack Developer", "Freelancer"]}
-                    loop={false}
-                    cursor
-                    cursorStyle="_"
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-                  />
-                </span>
-                <Cursor />
-              </h1>
+                <h1 className="text-2xl font-medium">
+                  I'm a{" "}
+                  <span className=" text-3xl font-bold gradiant-text">
+                    <Typewriter
+                      words={[" Fullstack Developer", "Freelancer"]}
+                      loop={false}
+                      cursor
+                      cursorStyle="_"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
+                  </span>
+                  <Cursor />
+                </h1>
 
-              <p className="text-xl lg:text-2xl font-normal lg:mt-3">
-                Committed to taking on tough challenges and bringing ideas to
-                life in a big way. With lots of creativity, innovation, and hard
-                work
-              </p>
-              <div className="lg:mt-3 lg:block flex lg:justify-center mb-5">
-                <button className="bg-gradient-to-t from-blue-500 to-cyan-500 rounded px-8 py-2 mt-2 text-white lg:text-xl hover:bg-gray-700 shadow-custom mr-8 ">
-                  Explore
-                </button>
-                <button  type="" className="bg-none border-[#4666ff] border-2 rounded px-8 py-2 mt-2 mr-8 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500">
-                  Hire Me
-                </button>
-              </div>
-              <div className="flex">
-                <a
-                  href="https://www.linkedin.com/in/abhijit02"
-                  className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
-                >
-                  <img src={ln} className="w-5 mt-1" />
-                </a>
-                <a
-                  href="https://github.com/Abhijit-2002"
-                  className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
-                >
-                  <img src={github} className="w-5 mt-1" />
-                </a>
-                <a
-                  href=""
-                  className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
-                >
-                  <img src={insta} className="w-5 mt-1" />
-                </a>
+                <p className="text-xl lg:text-2xl font-normal lg:mt-3">
+                  Committed to taking on tough challenges and bringing ideas to
+                  life in a big way. With lots of creativity, innovation, and
+                  hard work
+                </p>
+                <div className="lg:mt-3 lg:block flex lg:justify-center mb-5">
+                  <button className="bg-gradient-to-t from-blue-500 to-cyan-500 rounded px-8 py-2 mt-2 text-white lg:text-xl hover:bg-gray-700 shadow-custom mr-8 ">
+                    Explore
+                  </button>
+                  <button
+                    type=""
+                    className="bg-none border-[#4666ff] border-2 rounded px-8 py-2 mt-2 mr-8 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    Hire Me
+                  </button>
+                </div>
+                <div className="flex">
+                  <a
+                    href="https://www.linkedin.com/in/abhijit02"
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={ln} className="w-5 mt-1" />
+                  </a>
+                  <a
+                    href="https://github.com/Abhijit-2002"
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={github} className="w-5 mt-1" />
+                  </a>
+                  <a
+                    href=""
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={insta} className="w-5 mt-1" />
+                  </a>
+                </div>
               </div>
             </div>
+            <div className="text-white flex-1 mb-8 ml-5 hidden lg:block h-24">
+              <img src={portfolio} alt="" className="" />
+            </div>
           </div>
-          <div className="text-white flex-1 mb-8 ml-5 hidden lg:block h-24">
-            <img src={portfolio} alt="" className="" />
+        </div>
+
+        {/*************  For Small Screens ************** */}
+
+        <div className="md:hidden">
+          <div
+            id="Home"
+            className="scroll-smooth relative flex flex-col items-center pt-36 lg:pt-36 px-8 lg:px-16 bg-gray-700"
+          >
+            <img
+              src={portfolio}
+              alt=""
+              className="mb-8 lg:hidden max-w-full h-auto"
+            />{" "}
+            {/* Image for small screens */}
+            <div className="text-white flex-1 mr-5">
+              <div className="">
+                <p className="text-3xl lg:text-5xl font-medium mt-2">I am </p>
+                <h1 className="text-5xl font-bold pl-4 mb-6 lg:text-7xl  ">
+                  Abhijit{" "}
+                  <span className="gradiant-text lg:pl-2"> Chakraborty </span>
+                </h1>
+                <h1 className="text-2xl font-medium">
+                  I'm a{" "}
+                  <span className=" text-3xl font-bold gradiant-text">
+                    <Typewriter
+                      words={[" Fullstack Developer", "Freelancer"]}
+                      loop={false}
+                      cursor
+                      cursorStyle="_"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
+                  </span>
+                  <Cursor />
+                </h1>
+                <p className="text-xl lg:text-2xl font-normal lg:mt-3">
+                  Committed to taking on tough challenges and bringing ideas to
+                  life in a big way. With lots of creativity, innovation, and
+                  hard work
+                </p>
+                <div className="lg:mt-3 lg:block flex lg:justify-center mb-5">
+                  <button className="bg-gradient-to-t from-blue-500 to-cyan-500 rounded px-8 py-2 mt-2 text-white lg:text-xl hover:bg-gray-700 shadow-custom mr-8 ">
+                    Explore
+                  </button>
+                  <button
+                    type=""
+                    className="bg-none border-[#4666ff] border-2 rounded px-8 py-2 mt-2 mr-8 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    Hire Me
+                  </button>
+                </div>
+                <div className="flex">
+                  <a
+                    href="https://www.linkedin.com/in/abhijit02"
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={ln} className="w-5 mt-1" alt="LinkedIn" />
+                  </a>
+                  <a
+                    href="https://github.com/Abhijit-2002"
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={github} className="w-5 mt-1" alt="GitHub" />
+                  </a>
+                  <a
+                    href=""
+                    className="bg-none  rounded p-2 mr-2 mb-4 text-white lg:text-xl shadow-custom hover:bg-gradient-to-t from-blue-500 to-cyan-500"
+                  >
+                    <img src={insta} className="w-5 mt-1" alt="Instagram" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -234,7 +317,10 @@ function App() {
           </div>
           <div>
             <div className="contact-icons hidden md:flex  mt-4  ">
-              <a href="https://www.linkedin.com/in/abhijit02" className=" p-1 mr-2 ">
+              <a
+                href="https://www.linkedin.com/in/abhijit02"
+                className=" p-1 mr-2 "
+              >
                 <img src={ln} alt="" />
               </a>
               <a href="https://github.com/Abhijit-2002" className="ml-2 p-1 ">
