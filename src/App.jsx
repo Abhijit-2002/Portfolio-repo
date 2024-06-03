@@ -93,7 +93,7 @@ function App() {
         <div className="hidden md:block">
           <div
             id="Home"
-            className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700 lg:h-[100vh] h-auto "
+            className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700 lg:h-[100vh] "
           >
             <div className="text-white flex-1 mr-5">
               <div className="">
@@ -165,7 +165,7 @@ function App() {
 
         {/*************  For Small Screens ************** */}
 
-        <div className="md:hidden"  style={{ display: 'none' }}>
+        <div className="md:hidden">
           <div
             id="Home"
             className="scroll-smooth relative flex flex-col items-center pt-36 lg:pt-36 px-8 lg:px-16 bg-gray-700"
