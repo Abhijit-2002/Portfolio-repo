@@ -165,7 +165,7 @@ function App() {
 
         {/*************  For Small Screens ************** */}
 
-        <div className="md:hidden">
+        <div className="md:hidden"  style={{ display: 'none' }}>
           <div
             id="Home"
             className="scroll-smooth relative flex flex-col items-center pt-36 lg:pt-36 px-8 lg:px-16 bg-gray-700"
