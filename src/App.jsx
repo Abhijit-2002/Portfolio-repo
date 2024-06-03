@@ -157,7 +157,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="text-white flex-1 mb-8 ml-5 h-24">
+            <div className="text-white flex-1 mb-8 ml-5 hidden lg:block h-24">
               <img src={portfolio} alt="" className="" />
             </div>
           </div>
