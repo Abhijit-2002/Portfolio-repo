@@ -93,17 +93,17 @@ function App() {
         <div className="hidden md:block">
           <div
             id="Home"
-            className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700 lg:h-[100vh] "
+            className=" scroll-smooth relative flex  pt-36 lg:pt-36  px-8 lg:px-16  justify-evenly  bg-gray-700  h-auto w-full"
           >
-            <div className="text-white flex-1 mr-5">
-              <div className="">
+            <div className="text-white flex-1 mr-5 w-1/2">
+              <div className="w-full">
                 <p className="text-3xl lg:text-5xl font-medium mt-2">I am </p>
                 <h1 className="text-5xl font-bold pl-4 mb-6 lg:text-7xl  ">
                   Abhijit{" "}
                   <span className="gradiant-text lg:pl-2"> Chakraborty </span>
                 </h1>
 
-                <h1 className="text-2xl font-medium">
+                <h1 className="text-2xl font-medium ">
                   I'm a{" "}
                   <span className=" text-3xl font-bold gradiant-text">
                     <Typewriter
@@ -119,7 +119,7 @@ function App() {
                   <Cursor />
                 </h1>
 
-                <p className="text-xl lg:text-2xl font-normal lg:mt-3">
+                <p className="text-xl lg:text-2xl font-normal lg:mt-3 max-w-lg">
                   Committed to taking on tough challenges and bringing ideas to
                   life in a big way. With lots of creativity, innovation, and
                   hard work
@@ -157,7 +157,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="text-white flex-1 mb-8 ml-5 hidden lg:block h-24">
+            <div className="text-white flex-1 mb-8 ml-5 hiddenmd:inline-block h-auto w-full overflow-hidden">
               <img src={portfolio} alt="" className="" />
             </div>
           </div>
