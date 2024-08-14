@@ -51,7 +51,7 @@ const Skill = () => {
     { src: tailwindlogo, name: "Tailwind CSS" },
     { src: materialogo, name: "Material UI" },
     { src: vercellogo, name: "Vercel" },
-    { src: excellogo, name: "MS Exel" },
+    { src: excellogo, name: "MS Excel" },
     { src: tally, name: "Tally" },
     
    

@@ -1,49 +1,52 @@
 import React from "react";
 import Slider from "react-slick";
+import { useRef } from "react";
+
 import proj1 from "../assets/Projects/Chatapp.png";
 import proj2 from "../assets/Projects/Ahar.png";
 import proj3 from "../assets/Projects/Weathernow.png";
 import proj4 from "../assets/Projects/Amazon-clone.png";
 import proj5 from "../assets/Projects/Calculator.png";
 import proj6 from "../assets/Projects/landing page-1.png";
-import proj7 from "../assets/Projects/Landing page 2.png";
+import proj7 from "../assets/Projects/project-port.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const Projects = () => {
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
+  // var settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
     
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
+  // };
 
 
   const handleHover = (event) => {
@@ -91,52 +94,189 @@ const Projects = () => {
 //   );
 // };
 
+let sliderRef = useRef(null);
+const play = () => {
+  sliderRef.slickPlay();
+};
+const pause = () => {
+  sliderRef.slickPause();
+};
+
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+  
+};
+
+const settings2 = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  rtl:true,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+  
+};
+
 return (
-  <div className="w-3/4 m-auto">
-    <div className="mt-10">
-      <Slider {...settings}>
-        {proj.map((d, index) => (
-          <a
-            key={index}
-            href="#"
-            className="relative bg-gray-900  rounded-xl overflow-hidden w-1/3 sm:w-full sm:mx-auto block "
-            style={{ minWidth: "400px" }} >
-            <img
-              src={d.img}
-              alt=""
-              className="w-full object-cover transition-transform duration-300 transform hover:scale-110  "
-             
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHover}
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center gap-2 p-4 text-black font-bold bg-blue-100 bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-xl sm:text-2xl font-bold">{d.name}</p>
-              <p className="text-s sm:text-lg">{d.about}</p>
-              <div className="flex gap-2 mt-4">
-                <a
-                  href="#"
-                  className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex justify-center items-center text-center transition-colors duration-300"
-                >
-                  Github
+  <>
+  
+   <div className="h-full">
+   <div>
+      <div className="w-3/4 m-auto">
+      <div className="mt-10">
+      <Slider ref={slider => (sliderRef = slider)} {...settings}>
+      {proj.map((d, index) => (
+        <a
+        key={index}
+        href="#"
+        className="relative bg-gray-900  rounded-xl overflow-hidden w-1/3 sm:w-full sm:mx-auto block "
+        style={{ minWidth: "400px" }} >
+            <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+              <img class="rounded-t-lg" src= {d.img} alt="" />
+          </a>
+          <div class="p-5">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{d.name}</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{d.about}</p>
+              <div className=" flex items-center justify-between ">
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Check Demo <FaArrowRight/>
+                  
                 </a>
-                <a
-                  href="#"
-                  className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center transition-colors duration-300"
-                >
-                  Check Demo
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github <FaArrowRight/>
+                    
                 </a>
               </div>
-            </div>
+          </div>
+      </div>
           </a>
-        ))}
-      </Slider>
+      ))}
+        </Slider>
+      </div>
     </div>
-  </div>
+    </div>
+
+
+  {/* 2nd div */}
+  <div>
+              <div className="w-3/4 m-auto">
+                <div className="mt-10">
+                <Slider ref={slider => (sliderRef = slider)} {...settings2}>
+                {proj.map((d, index) => (
+                  <a
+                  key={index+2}
+                  href="#"
+                  className="relative bg-gray-900  rounded-xl overflow-hidden w-1/3 sm:w-full sm:mx-auto block "
+                  style={{ minWidth: "400px" }} >
+                      <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg" src= {d.img} alt="" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{d.name}</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{d.about}</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            check Demo
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                    </a>
+                ))}
+                  </Slider>
+                </div>
+              </div>
+              </div>
+   </div>
+  </>
 );
 };
 
 
-
+{/* <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class="rounded-t-lg" src= {proj1} alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div> */}
 
 
 
@@ -153,7 +293,7 @@ const proj = [
     name: "Ahar Songroho",
     img: proj2,
     about:
-      "Recipe search app with multi-cuisine options, filters for easy browsing, offering global culinary delights.",
+      "Recipe search app with multi-cuisine options, filters for easy browsing, offering global culinary delights,based on your taste preferences.",
   },
   {
     name: "Weather Now",
@@ -188,3 +328,38 @@ const proj = [
 ];
 
 export default Projects;
+
+// {proj.map((d, index) => (
+//   <a
+//     key={index}
+//     href="#"
+//     className="relative bg-gray-900  rounded-xl overflow-hidden w-1/3 sm:w-full sm:mx-auto block "
+//     style={{ minWidth: "400px" }} >
+//     <img
+//       src={d.img}
+//       alt=""
+//       className="w-full object-cover transition-transform duration-300 transform hover:scale-110  "
+     
+//       onMouseEnter={handleHover}
+//       onMouseLeave={handleHover}
+//     />
+//     <div className="absolute inset-0 flex flex-col justify-center items-center gap-2 p-4 text-black font-bold bg-blue-100 bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100">
+//       <p className="text-xl sm:text-2xl font-bold">{d.name}</p>
+//       <p className="text-s sm:text-lg">{d.about}</p>
+//       <div className="flex gap-2 mt-4">
+//         <a
+//           href="#"
+//           className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex justify-center items-center text-center transition-colors duration-300"
+//         >
+//           Github
+//         </a>
+//         <a
+//           href="#"
+//           className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center transition-colors duration-300"
+//         >
+//           Check Demo
+//         </a>
+//       </div>
+//     </div>
+//   </a>
+// ))}

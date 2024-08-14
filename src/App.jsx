@@ -176,7 +176,7 @@ function App() {
 
         {/* *****************Projects Section *************  */}
         <div
-          className="scroll-smooth bg-gray-800   w-full lg:h-[100vh] overflow-hidden"
+          className="scroll-smooth bg-gray-800   w-full lg:h-auto overflow-hidden"
           id="Projects"
         >
           <div className=" text-xl lg:text-2xl font-small lg:font-medium text-white text-center lg:pt-4 pt-2 ">
